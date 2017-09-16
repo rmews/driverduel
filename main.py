@@ -1,3 +1,7 @@
+import http.server
+import requests
+import os
+import threading
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
 from sqlalchemy import create_engine, func, desc
 from sqlalchemy.orm import sessionmaker
@@ -73,6 +77,10 @@ def showDriver(driver_name):
     return render_template('driver.html', driver=driver, results=results)
 
 if __name__ == '__main__':
-    app.run(debug=True, use_reloader=True)
-    # app.debug = True
-    # app.run(host='0.0.0.0', port=5000)
+    port = int(os.environ.get('PORT', 8000))    # Use PORT if it's there.
+    server_address = ('', port)
+
+# if __name__ == '__main__':
+#     app.run(debug=True, use_reloader=True)
+#     app.debug = True
+#     app.run(host='0.0.0.0', port=5000)
