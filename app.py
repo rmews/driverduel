@@ -1,4 +1,3 @@
-// ./app.py
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
 from sqlalchemy import create_engine, func, desc
 from sqlalchemy.orm import sessionmaker
