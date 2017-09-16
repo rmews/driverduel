@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{driver.name}} Stats</title>
+</head>
+<body>
+    <!-- Extend base template here -->
+    {% extends "base.html" %}
+    {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col s12 center">
+                <h4 class="grey-text text-lighten-4">{{driver.name}} Stats</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 center orange-text text-darken-3">
+                <p>Averages calculated from 2013 to current season (Gen 6 car introduced in 2013). Fantasy data calculated using DraftKings formulas.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <table class="centered bordered highlight sortable">
+                <thead class="black grey-text text-lighten-1">
+                    <tr>
+                        <th class="hvr-underline-from-center">Track</th>
+                        <th class="hvr-underline-from-center">Track Type</th>
+                        <th class="hvr-underline-from-center">Avg Start</th>
+                        <th class="hvr-underline-from-center">Avg Finish</th>
+                        <th class="hvr-underline-from-center">Avg Laps Led</th>
+                        <th class="hvr-underline-from-center">Avg Fastest Laps</th>
+                        <th class="hvr-underline-from-center">Fantasy Points - Finishing Position</th>
+                        <th class="hvr-underline-from-center">Fantasy Points - Position Differential</th>
+                        <th class="hvr-underline-from-center">Fantasy Points - Laps Led</th>
+                        <th class="hvr-underline-from-center">Fantasy Points - Fastest Laps</th>
+                        <th class="hvr-underline-from-center">Fantasy Points - Total</th>
+                    </tr>
+                </thead>
+                <tbody class="grey-text text-darken-4">
+                    {% for result in results %}
+                    <tr>
+                        <td><a href="{{url_for('showTrack', track_name=result.name)}}">{{result.name}}</a></td>
+                        <td>{{result.track_type}}</td>
+                        <td>{{result.avg_start|round(2,'ceil')}}</td>
+                        <td>{{result.avg_finish|round(2,'ceil')}}</td>
+                        <td>{{result.avg_laps_led|round(2,'ceil')}}</td>
+                        <td>{{result.avg_fastest_laps|round(2,'ceil')}}</td>
+                        <td>{{result.avg_points_finish|round(2,'ceil')}}</td>
+                        <td>{{result.avg_points_differential|round(2,'ceil')}}</td>
+                        <td>{{result.avg_points_led|round(2,'ceil')}}</td>
+                        <td>{{result.avg_points_fastest|round(2,'ceil')}}</td>
+                        <td class="green-text text-accent-4">{{result.avg_points_total|round(2,'ceil')}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

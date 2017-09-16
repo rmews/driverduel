@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NASCAR Driver Stats</title>
+</head>
+<body>
+    <!-- Extend base template here -->
+    {% extends "base.html" %}
+    {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col s12 center">
+                <h4 class="grey-text text-lighten-4">Drivers</h4>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for driver in drivers %}
+                {% if driver.active == "yes" %}
+                <div class="col s6 m3">
+                    <div class="card small hoverable">
+                        <div class="card-image">
+                            <a href="{{url_for('showDriver', driver_name=driver.name)}}">
+                                <img src="{{driver.picture}}">
+                            </a>
+                        </div>
+                        <div class="card-action center-align green accent-3">
+                            <a href="{{url_for('showDriver', driver_name=driver.name)}}" class="black-text">{{driver.name}}</a>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

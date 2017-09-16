@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>NASCAR stats for Fantasy Players: Driver Duel</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="NASCAR stats for Fantasy Players. View NASCAR stats and averages so you can win at NASCAR fantasy.">
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+        <link rel=stylesheet type=text/css href="{{url_for('static', filename='base.css')}}">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PVPKB99');</script>
+<!-- End Google Tag Manager -->
+    </head>
+    <body class="grey darken-4">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVPKB99"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+        <header>
+        <!-- Navbar -->
+            <nav>
+                <div class="container-wide grey darken-3">
+                    <div class="row">
+                        <div class="col s12 m3 l12">
+                            <a href="/" class="brand-logo grey-text text-lighten-4">Driver Duel</a>
+                        </div>
+                        <div class="col s12 m9 l12">
+                            <div class="right">
+                                <ul>
+                                    <li><a href="{{url_for('showTracks', tracks=tracks)}}" class="grey-text text-lighten-4">Tracks</a></li>
+                                    <li><a href="{{url_for('showDrivers', drivers=drivers)}}" class="grey-text text-lighten-4">Drivers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+        <!-- block content goes here -->
+            {% block content %}
+            {% endblock %}
+        </main>
+        <!-- Footer -->
+        <footer class="page-footer grey darken-3">
+            <div class="footer-copyright">
+                <div class="container">
+                    <a class="grey-text text-lighten-4 right" href="https://twitter.com/TheBobtrain">Made by Bobtrain</a>
+                </div>
+            </div>
+        </footer>
+        <!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+        <script src="{{url_for('static', filename='tablesort.js')}}"></script>
+    </body>
+</html>
