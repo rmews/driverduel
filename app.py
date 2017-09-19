@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
 from sqlalchemy import create_engine, func, desc
 from sqlalchemy.orm import sessionmaker
-from database_setup import Base, Driver, Track, RaceResult
+from models import Base, Driver, Track, RaceResult
 
 app = Flask(__name__)
 
@@ -17,19 +17,23 @@ def frontPage():
 
 @app.route('/tracks/')
 def showTracks():
+    """Search the database for all tracks"""
     tracks = session.query(Track).all()
-    # pass all track data to template
+    """Return results to template"""
     return render_template('tracks.html', tracks=tracks)
 
 @app.route('/drivers/')
 def showDrivers():
+    """Search the database for all drivers"""
     drivers = session.query(Driver).all()
-    # pass all driver data to template
+    """Return results to template"""
     return render_template('drivers.html', drivers=drivers)
 
 @app.route('/tracks/<track_name>/')
 def showTrack(track_name):
+    """Search the database for the track from URL route"""
     track = session.query(Track).filter_by(name=track_name).one()
+    """Search database for results filtered by track from URL route"""
     results = (
         session.query(
                     Driver.name,
@@ -47,11 +51,14 @@ def showTrack(track_name):
                 .filter(RaceResult.track == track)
                 .order_by(desc("avg_points_total"))
     )
+    """Return results to template"""
     return render_template('track.html', track=track, results=results)
 
 @app.route('/drivers/<driver_name>/')
 def showDriver(driver_name):
+    """Search the database for the driver from URL route"""
     driver = session.query(Driver).filter_by(name=driver_name).one()
+    """Search database for results filtered by driver from URL route"""
     results = (
         session.query(
                     Track.name,
@@ -70,9 +77,9 @@ def showDriver(driver_name):
                 .filter(RaceResult.driver == driver)
                 .order_by(desc("avg_points_total"))
     )
+    """Return results to template"""
     return render_template('driver.html', driver=driver, results=results)
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
-    # app.debug = True
     # app.run(host='0.0.0.0', port=5000)
