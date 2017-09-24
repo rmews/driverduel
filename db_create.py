@@ -199,7 +199,7 @@ session.add(driver30)
 session.commit()
 
 driver31 = Driver(name="Joey Gase",
-                active="yes",
+                active="no",
                 picture='https://static.nascar.com/content/dam/nascar/drivers/2016-headshots/white/headshot_new_2016_nxs_joey_gase_550x440.png/jcr:content/renditions/original')
 session.add(driver31)
 session.commit()
@@ -325,7 +325,7 @@ session.add(driver51)
 session.commit()
 
 driver52 = Driver(name="Timmy Hill",
-                active="yes",
+                active="no",
                 picture='https://static.nascar.com/content/dam/nascar/drivers/T/timmy-hill/lookup/2012-NNS-Timmy-Hill-Headshot.png/_jcr_content/renditions/2012-NNS-Timmy-Hill-Headshot.png.main.png')
 session.add(driver52)
 session.commit()
@@ -397,9 +397,15 @@ session.add(driver63)
 session.commit()
 
 driver64 = Driver(name="Ray Black Jr.",
-                active="yes",
+                active="no",
                 picture='https://www.nascar.com/wp-content/uploads/sites/7/2017/01/headshot_new_2016_nxs_ray_black_jr_550x440.png')
 session.add(driver64)
+session.commit()
+
+driver65 = Driver(name="Cody Ware",
+                active="yes",
+                picture='http://s3.amazonaws.com/fantasygames.nascar.com.prod/drivers/headshots/4125.png?1424464822')
+session.add(driver65)
 session.commit()
 
 # Insert Track Data
@@ -73725,6 +73731,66 @@ raceResult4877 = RaceResult(driver_id=55,
                         points_total=11.0,
                         track=track5)
 session.add(raceResult4877)
+session.commit()
+
+raceResult4878 = RaceResult(driver_id=65,
+                        date="2017-03-05",
+                        finish=39,
+                        start=39,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=5,
+                        points_differential=0,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=5.0,
+                        track=track1)
+session.add(raceResult4878)
+session.commit()
+
+raceResult4879 = RaceResult(driver_id=65,
+                        date="2017-09-03",
+                        finish=37,
+                        start=39,
+                        laps_led=0,
+                        fastest_laps=2,
+                        points_finish=7,
+                        points_differential=2,
+                        points_led=0.0,
+                        points_fastest=1.0,
+                        points_total=10.0,
+                        track=track6)
+session.add(raceResult4879)
+session.commit()
+
+raceResult4880 = RaceResult(driver_id=65,
+                        date="2017-06-04",
+                        finish=35,
+                        start=38,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=9,
+                        points_differential=3,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=12.0,
+                        track=track8)
+session.add(raceResult4880)
+session.commit()
+
+raceResult4881 = RaceResult(driver_id=65,
+                        date="2017-06-11",
+                        finish=39,
+                        start=38,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=5,
+                        points_differential=-1,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=4.0,
+                        track=track18)
+session.add(raceResult4881)
 session.commit()
 
 print "Boom! Data was added."
