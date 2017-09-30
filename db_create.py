@@ -157,7 +157,7 @@ session.add(driver23)
 session.commit()
 
 driver24 = Driver(name="Gray Gaulding",
-                active="yes",
+                active="no",
                 picture='https://static.nascar.com/content/dam/nascar/drivers/G/grey-gaulding/lookup/headshot_new_2015_graygaulding_ncwts_550x440.png/jcr:content/renditions/original')
 session.add(driver24)
 session.commit()
@@ -325,7 +325,7 @@ session.add(driver51)
 session.commit()
 
 driver52 = Driver(name="Timmy Hill",
-                active="no",
+                active="yes",
                 picture='https://static.nascar.com/content/dam/nascar/drivers/T/timmy-hill/lookup/2012-NNS-Timmy-Hill-Headshot.png/_jcr_content/renditions/2012-NNS-Timmy-Hill-Headshot.png.main.png')
 session.add(driver52)
 session.commit()
@@ -373,7 +373,7 @@ session.add(driver59)
 session.commit()
 
 driver60 = Driver(name="BJ McLeod",
-                active="no",
+                active="yes",
                 picture='http://www.nascar.com/wp-content/uploads/sites/7/2017/01/headshot_new_2016_bj_mcleod_550x440.png')
 session.add(driver60)
 session.commit()
@@ -403,9 +403,15 @@ session.add(driver64)
 session.commit()
 
 driver65 = Driver(name="Cody Ware",
-                active="yes",
+                active="no",
                 picture='http://s3.amazonaws.com/fantasygames.nascar.com.prod/drivers/headshots/4125.png?1424464822')
 session.add(driver65)
+session.commit()
+
+driver66 = Driver(name="Ross Chastain",
+                active="yes",
+                picture='https://static.nascar.com/content/dam/nascar/drivers/R/ross-chastain/editorial/headshot_new_2016_nxs_ross_chastain_550x440_v2.png/jcr:content/renditions/original')
+session.add(driver66)
 session.commit()
 
 # Insert Track Data
@@ -73791,6 +73797,591 @@ raceResult4881 = RaceResult(driver_id=65,
                         points_total=4.0,
                         track=track18)
 session.add(raceResult4881)
+session.commit()
+
+raceResult4882 = RaceResult(driver_id=1,
+                        date="2017-09-24",
+                        finish=17,
+                        start=20,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=27,
+                        points_differential=3,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=30.0,
+                        track=track16)
+session.add(raceResult4882)
+session.commit()
+
+raceResult4883 = RaceResult(driver_id=4,
+                        date="2017-09-24",
+                        finish=26,
+                        start=29,
+                        laps_led=0,
+                        fastest_laps=4,
+                        points_finish=18,
+                        points_differential=3,
+                        points_led=0.0,
+                        points_fastest=2.0,
+                        points_total=23.0,
+                        track=track16)
+session.add(raceResult4883)
+session.commit()
+
+raceResult4884 = RaceResult(driver_id=5,
+                        date="2017-09-24",
+                        finish=19,
+                        start=17,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=25,
+                        points_differential=-2,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=23.0,
+                        track=track16)
+session.add(raceResult4884)
+session.commit()
+
+raceResult4885 = RaceResult(driver_id=8,
+                        date="2017-09-24",
+                        finish=4,
+                        start=13,
+                        laps_led=0,
+                        fastest_laps=11,
+                        points_finish=40,
+                        points_differential=9,
+                        points_led=0.0,
+                        points_fastest=5.5,
+                        points_total=54.5,
+                        track=track16)
+session.add(raceResult4885)
+session.commit()
+
+raceResult4886 = RaceResult(driver_id=63,
+                        date="2017-09-24",
+                        finish=32,
+                        start=36,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=12,
+                        points_differential=4,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=16.0,
+                        track=track16)
+session.add(raceResult4886)
+session.commit()
+
+raceResult4887 = RaceResult(driver_id=13,
+                        date="2017-09-24",
+                        finish=11,
+                        start=14,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=33,
+                        points_differential=3,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=36.0,
+                        track=track16)
+session.add(raceResult4887)
+session.commit()
+
+raceResult4888 = RaceResult(driver_id=14,
+                        date="2017-09-24",
+                        finish=21,
+                        start=22,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=23,
+                        points_differential=1,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=24.0,
+                        track=track16)
+session.add(raceResult4888)
+session.commit()
+
+raceResult4889 = RaceResult(driver_id=15,
+                        date="2017-09-24",
+                        finish=7,
+                        start=16,
+                        laps_led=0,
+                        fastest_laps=1,
+                        points_finish=37,
+                        points_differential=9,
+                        points_led=0.0,
+                        points_fastest=0.5,
+                        points_total=46.5,
+                        track=track16)
+session.add(raceResult4889)
+session.commit()
+
+raceResult4890 = RaceResult(driver_id=65,
+                        date="2017-09-24",
+                        finish=30,
+                        start=32,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=14,
+                        points_differential=2,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=16.0,
+                        track=track16)
+session.add(raceResult4890)
+session.commit()
+
+raceResult4891 = RaceResult(driver_id=58,
+                        date="2017-09-24",
+                        finish=27,
+                        start=33,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=17,
+                        points_differential=6,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=23.0,
+                        track=track16)
+session.add(raceResult4891)
+session.commit()
+
+raceResult4892 = RaceResult(driver_id=17,
+                        date="2017-09-24",
+                        finish=34,
+                        start=15,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=10,
+                        points_differential=-19,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=-9.0,
+                        track=track16)
+session.add(raceResult4892)
+session.commit()
+
+raceResult4893 = RaceResult(driver_id=18,
+                        date="2017-09-24",
+                        finish=18,
+                        start=27,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=26,
+                        points_differential=9,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=35.0,
+                        track=track16)
+session.add(raceResult4893)
+session.commit()
+
+raceResult4894 = RaceResult(driver_id=57,
+                        date="2017-09-24",
+                        finish=8,
+                        start=25,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=36,
+                        points_differential=17,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=53.0,
+                        track=track16)
+session.add(raceResult4894)
+session.commit()
+
+raceResult4895 = RaceResult(driver_id=20,
+                        date="2017-09-24",
+                        finish=29,
+                        start=21,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=15,
+                        points_differential=-8,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=7.0,
+                        track=track16)
+session.add(raceResult4895)
+session.commit()
+
+raceResult4896 = RaceResult(driver_id=21,
+                        date="2017-09-24",
+                        finish=12,
+                        start=3,
+                        laps_led=0,
+                        fastest_laps=5,
+                        points_finish=32,
+                        points_differential=-9,
+                        points_led=0.0,
+                        points_fastest=2.5,
+                        points_total=25.5,
+                        track=track16)
+session.add(raceResult4896)
+session.commit()
+
+raceResult4897 = RaceResult(driver_id=56,
+                        date="2017-09-24",
+                        finish=6,
+                        start=8,
+                        laps_led=0,
+                        fastest_laps=33,
+                        points_finish=38,
+                        points_differential=2,
+                        points_led=0.0,
+                        points_fastest=16.5,
+                        points_total=56.5,
+                        track=track16)
+session.add(raceResult4897)
+session.commit()
+
+raceResult4898 = RaceResult(driver_id=24,
+                        date="2017-09-24",
+                        finish=33,
+                        start=34,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=11,
+                        points_differential=1,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=12.0,
+                        track=track16)
+session.add(raceResult4898)
+session.commit()
+
+raceResult4899 = RaceResult(driver_id=26,
+                        date="2017-09-24",
+                        finish=16,
+                        start=11,
+                        laps_led=0,
+                        fastest_laps=1,
+                        points_finish=28,
+                        points_differential=-5,
+                        points_led=0.0,
+                        points_fastest=0.5,
+                        points_total=23.5,
+                        track=track16)
+session.add(raceResult4899)
+session.commit()
+
+raceResult4900 = RaceResult(driver_id=29,
+                        date="2017-09-24",
+                        finish=38,
+                        start=37,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=6,
+                        points_differential=-1,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=5.0,
+                        track=track16)
+session.add(raceResult4900)
+session.commit()
+
+raceResult4901 = RaceResult(driver_id=30,
+                        date="2017-09-24",
+                        finish=14,
+                        start=12,
+                        laps_led=0,
+                        fastest_laps=3,
+                        points_finish=30,
+                        points_differential=-2,
+                        points_led=0.0,
+                        points_fastest=1.5,
+                        points_total=29.5,
+                        track=track16)
+session.add(raceResult4901)
+session.commit()
+
+raceResult4902 = RaceResult(driver_id=32,
+                        date="2017-09-24",
+                        finish=10,
+                        start=39,
+                        laps_led=0,
+                        fastest_laps=1,
+                        points_finish=34,
+                        points_differential=29,
+                        points_led=0.0,
+                        points_fastest=0.5,
+                        points_total=63.5,
+                        track=track16)
+session.add(raceResult4902)
+session.commit()
+
+raceResult4903 = RaceResult(driver_id=35,
+                        date="2017-09-24",
+                        finish=35,
+                        start=9,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=9,
+                        points_differential=-26,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=-17.0,
+                        track=track16)
+session.add(raceResult4903)
+session.commit()
+
+raceResult4904 = RaceResult(driver_id=36,
+                        date="2017-09-24",
+                        finish=36,
+                        start=6,
+                        laps_led=0,
+                        fastest_laps=3,
+                        points_finish=8,
+                        points_differential=-30,
+                        points_led=0.0,
+                        points_fastest=1.5,
+                        points_total=-20.5,
+                        track=track16)
+session.add(raceResult4904)
+session.commit()
+
+raceResult4905 = RaceResult(driver_id=37,
+                        date="2017-09-24",
+                        finish=37,
+                        start=7,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=7,
+                        points_differential=-30,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=-23.0,
+                        track=track16)
+session.add(raceResult4905)
+session.commit()
+
+raceResult4906 = RaceResult(driver_id=61,
+                        date="2017-09-24",
+                        finish=1,
+                        start=1,
+                        laps_led=187,
+                        fastest_laps=89,
+                        points_finish=46,
+                        points_differential=0,
+                        points_led=46.75,
+                        points_fastest=44.5,
+                        points_total=137.25,
+                        track=track16)
+session.add(raceResult4906)
+session.commit()
+
+raceResult4907 = RaceResult(driver_id=38,
+                        date="2017-09-24",
+                        finish=2,
+                        start=2,
+                        laps_led=1,
+                        fastest_laps=35,
+                        points_finish=42,
+                        points_differential=0,
+                        points_led=0.25,
+                        points_fastest=17.5,
+                        points_total=59.75,
+                        track=track16)
+session.add(raceResult4907)
+session.commit()
+
+raceResult4908 = RaceResult(driver_id=39,
+                        date="2017-09-24",
+                        finish=25,
+                        start=28,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=19,
+                        points_differential=3,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=22.0,
+                        track=track16)
+session.add(raceResult4908)
+session.commit()
+
+raceResult4909 = RaceResult(driver_id=40,
+                        date="2017-09-24",
+                        finish=5,
+                        start=5,
+                        laps_led=112,
+                        fastest_laps=36,
+                        points_finish=39,
+                        points_differential=0,
+                        points_led=28.0,
+                        points_fastest=18.0,
+                        points_total=85.0,
+                        track=track16)
+session.add(raceResult4909)
+session.commit()
+
+raceResult4910 = RaceResult(driver_id=41,
+                        date="2017-09-24",
+                        finish=31,
+                        start=26,
+                        laps_led=0,
+                        fastest_laps=2,
+                        points_finish=13,
+                        points_differential=-5,
+                        points_led=0.0,
+                        points_fastest=1.0,
+                        points_total=9.0,
+                        track=track16)
+session.add(raceResult4910)
+session.commit()
+
+raceResult4911 = RaceResult(driver_id=42,
+                        date="2017-09-24",
+                        finish=3,
+                        start=10,
+                        laps_led=0,
+                        fastest_laps=29,
+                        points_finish=41,
+                        points_differential=7,
+                        points_led=0.0,
+                        points_fastest=14.5,
+                        points_total=62.5,
+                        track=track16)
+session.add(raceResult4911)
+session.commit()
+
+raceResult4912 = RaceResult(driver_id=44,
+                        date="2017-09-24",
+                        finish=23,
+                        start=31,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=21,
+                        points_differential=8,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=29.0,
+                        track=track16)
+session.add(raceResult4912)
+session.commit()
+
+raceResult4913 = RaceResult(driver_id=45,
+                        date="2017-09-24",
+                        finish=20,
+                        start=19,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=24,
+                        points_differential=-1,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=23.0,
+                        track=track16)
+session.add(raceResult4913)
+session.commit()
+
+raceResult4914 = RaceResult(driver_id=46,
+                        date="2017-09-24",
+                        finish=28,
+                        start=35,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=16,
+                        points_differential=7,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=23.0,
+                        track=track16)
+session.add(raceResult4914)
+session.commit()
+
+raceResult4915 = RaceResult(driver_id=48,
+                        date="2017-09-24",
+                        finish=15,
+                        start=24,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=29,
+                        points_differential=9,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=38.0,
+                        track=track16)
+session.add(raceResult4915)
+session.commit()
+
+raceResult4916 = RaceResult(driver_id=49,
+                        date="2017-09-24",
+                        finish=9,
+                        start=4,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=35,
+                        points_differential=-5,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=30.0,
+                        track=track16)
+session.add(raceResult4916)
+session.commit()
+
+raceResult4917 = RaceResult(driver_id=50,
+                        date="2017-09-24",
+                        finish=13,
+                        start=18,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=31,
+                        points_differential=5,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=36.0,
+                        track=track16)
+session.add(raceResult4917)
+session.commit()
+
+raceResult4918 = RaceResult(driver_id=54,
+                        date="2017-09-24",
+                        finish=24,
+                        start=23,
+                        laps_led=0,
+                        fastest_laps=7,
+                        points_finish=20,
+                        points_differential=-1,
+                        points_led=0.0,
+                        points_fastest=3.5,
+                        points_total=22.5,
+                        track=track16)
+session.add(raceResult4918)
+session.commit()
+
+raceResult4919 = RaceResult(driver_id=55,
+                        date="2017-09-24",
+                        finish=22,
+                        start=30,
+                        laps_led=0,
+                        fastest_laps=3,
+                        points_finish=22,
+                        points_differential=8,
+                        points_led=0.0,
+                        points_fastest=1.5,
+                        points_total=31.5,
+                        track=track16)
+session.add(raceResult4919)
+session.commit()
+
+raceResult4920 = RaceResult(driver_id=66,
+                        date="2017-06-04",
+                        finish=20,
+                        start=36,
+                        laps_led=0,
+                        fastest_laps=0,
+                        points_finish=24,
+                        points_differential=16,
+                        points_led=0.0,
+                        points_fastest=0.0,
+                        points_total=40.0,
+                        track=track8)
+session.add(raceResult4920)
 session.commit()
 
 print "Boom! Data was added."
